@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <a href="/nbas">Browse Players</a>
+    <title>Add New Player</title>
+  </head>
+  <body>
+    <h1>Create a New Player !</h1>
+    <!-- config a html form -> two attributes (action-> endpoint string) (method-> POSt) -->
+    <form action="/nbas" method="POST">
+      <!-- system of related html tags/elements -->
+      <!-- input > name + type (attributes) -->
+      <div>
+        <label for="name">Player Name:</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="isAPlayer">Is A Player:</label>
+        <!-- aria - accessibility standard -->
+        <input type="checkbox" name="isAPlayer" id="isAPlayer" />
+      </div>
+      <!-- submit button will trigger the form request -> send data (name attribute -> { } -> endpoint) -->
+      <button type="submit">Add Players</button>
+    </form>
+  </body>
+</html>

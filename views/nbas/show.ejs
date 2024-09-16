@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBA Player Page</title>
+  </head>
+  <body>
+    <h1>NBA Player Page</h1>
+    <h2>Name: <%=player.name %></h2>
+    <% if (player.isAPlayer) { %>
+    <p>This is a player!</p>
+    <% } else { %>
+    <p>This is not a player!</p>
+    <% } %>
+    <form method="POST" action="/nbas/<%= player._id%>?_method=DELETE">
+      <a href="/nbas/<%=player._id%>/edit">Edit </a>
+      <a href="/nbas">Back to A Player </a>
+      <button type="submit">Delete A Player</button>
+    </form>
+  </body>
+</html>

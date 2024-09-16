@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<a href="/nbas/new">Add A Different Player</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBA</title>
+  </head>
+  <body>
+    <h1>All Players</h1>
+    <ul>
+      <% player.forEach(player => { %>
+      <li>
+        <a href="/nbas/<%= player._id %>"> <%= player.name %> </a>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

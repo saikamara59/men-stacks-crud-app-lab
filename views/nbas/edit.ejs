@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBA Edit Page</title>
+  </head>
+  <body>
+    <h1>Player Edit - <%= player.name %></h1>
+    <form method="POST" action="/nbas/<%=player._id%>?_method=PUT">
+      <div>
+        <label for="name">Player Name:</label>
+        <input type="text" name="name" id="name" value="<%= player.name %>" />
+      </div>
+      <div>
+        <label for="isAPlayer">Is A Player:</label>
+        <!-- aria - accessibility standard -->
+        <input type="checkbox" name="isAPlayer" id="isAPlayer" />
+      </div>
+
+      <button type="submit">Edit Player</button>
+    </form>
+  </body>
+</html>

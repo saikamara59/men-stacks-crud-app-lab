@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBA Players</title>
+  </head>
+  <body>
+    <h1>Create A NBA Roster</h1>
+    <!-- views/movies/new.ejs-->
+     <form action="/nbas" method="POST">
+        <label for ="name"> Name:</label>
+        <input type="text" name="name" id="name" />
+        <label for="isAPlayer">NBA Player ?</label>
+        <input type="checkbox" name="isAPlayer" 
+        id="isAPlayer" />
+        <button type="submit"> Add Player </button>
+</html>
